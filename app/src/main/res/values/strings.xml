@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">JournalApp</string>
+    <string name="title_activity_main2">Entries</string>
+    <string name="subject_hint"><i>Subject</i></string>
+    <string name="content_hint"><i>Content</i></string>
+    <string name="subject">Subject</string>
+    <string name="Date">Date</string>
+    <string name="welcome_to_alc_journal_app">Welcome to ALC Journal Application</string>
+    <string name="fetching_entries">Fetching entries...</string>
+    <string name="Reload">Reload</string>
 </resources>
