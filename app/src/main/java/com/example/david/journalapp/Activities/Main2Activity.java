@@ -220,9 +220,7 @@ public class Main2Activity extends AppCompatActivity {
                 .setTimestampsInSnapshotsEnabled(true)
                 .build();
         db.setFirestoreSettings(settings);
-
         entries = new ArrayList<>();
-
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         db.collection("entries")

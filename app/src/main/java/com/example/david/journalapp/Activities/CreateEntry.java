@@ -28,7 +28,7 @@ import static com.example.david.journalapp.Helper.cancelProgress;
 import static com.example.david.journalapp.Helper.isConnected;
 import static com.example.david.journalapp.Helper.openProgress;
 
-public class CreateEntry extends AppCompatActivity {
+public class CreateEntry extends AppCompatActivity  {
 
     EditText subjectEditText;
     EditText contentEditText;
@@ -111,11 +111,11 @@ public class CreateEntry extends AppCompatActivity {
                 db.collection("entries").document(intent.getStringExtra("id"))
                         .set(entry)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                handleOnSuccess();
-                            }
-                        })
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        handleOnSuccess();
+                    }
+                })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {

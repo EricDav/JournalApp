@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "981529175119-i6tvi1freqmeaf3d8heus5g288l27q40.apps.googleusercontent.com",
+          "client_id": "981529175119-uqge1hc6rlpvvqogqqvifkr6h1nnjp21.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.david.journalapp",
-            "certificate_hash": "ddd71052cbd16b25ccbe0c3db2f152051a69e60a"
+            "certificate_hash": "6d75e485c60caa557c561e7062ac9377f99a5ac5"
           }
         },
         {
@@ -29,24 +29,17 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDGinQk-zah88VjgluPoz9aUUVF7fraaBU"
+          "current_key": "AIzaSyAgkCMPWcksmvjoeDp48w_W5w2nVHefQW8"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "981529175119-p6f7urtj53stb772r59ms2align1lmte.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

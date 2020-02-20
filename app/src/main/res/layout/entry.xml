@@ -19,6 +19,7 @@
         android:layout_alignParentTop="true"
         android:textColor="#000"
         android:singleLine="true"
+        android:text="The Money"
         android:layout_marginTop="@dimen/entry_layout_margin_top"
         android:layout_marginStart="@dimen/entry_summary_margin_start"
         android:textSize="@dimen/entry_text_size"
@@ -32,6 +33,7 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/dateId"
         android:ellipsize="end"
+        android:text="The Money"
         android:layout_marginStart="@dimen/entry_summary_margin_start"
         android:fontFamily="serif"
         android:singleLine="true"
@@ -46,6 +48,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="@dimen/entry_margin_right"
         android:textSize="@dimen/entry_date_text_size"
+        android:text="The Money"
         android:textColor="#3F51B5"
         />
 </RelativeLayout>

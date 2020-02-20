@@ -2,7 +2,6 @@ package com.example.david.journalapp;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,7 +18,6 @@ public class RecyclerTouchListner implements RecyclerView.OnItemTouchListener {
 
 
     public RecyclerTouchListner(Context context, final RecyclerView recyclerView, final ClickListener clickListener) {
-        Log.d("TOURCH", "I am touching");
         this.clickListener = clickListener;
         gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
             @Override

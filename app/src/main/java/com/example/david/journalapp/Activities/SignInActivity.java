@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -35,8 +36,15 @@ public class SignInActivity extends Activity {
         setContentView(R.layout.activity_sign_in);
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         progressDialog = new ProgressDialog(this);
+        try {
+            Log.d("DDDD", account.toJson());
+        } catch (Exception e) {
+            Log.d("DDDD", "AFTER");
+            Log.w("FAILURE", "Error adding document", e);
+        }
 
         if (account != null) {
+            Log.d("STRAT", "IN HERE!");
             startActivity(new Intent(this, Main2Activity.class));
             finish();
         }
@@ -48,6 +56,7 @@ public class SignInActivity extends Activity {
                 signIn();
             }
         });
+
         // Configure sign-in to request the user's ID, email address, and basic
         // profile. ID and basic profile are included in DEFAULT_SIGN_IN.
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -99,19 +108,28 @@ public class SignInActivity extends Activity {
      */
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
+            Log.d("INSIDE", "INSIDE SIGN IN");
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            Log.d("INSIDE", "INSIDE SIGN IN1");
             SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+            Log.d("INSIDE", "INSIDE SIGN IN2");
             SharedPreferences.Editor editor = sharedPref.edit();
+            Log.d("INSIDE", "INSIDE SIGN IN3");
             editor.putString("loginUser", account.getEmail());
+            Log.d("INSIDE", "INSIDE SIGN IN4");
             editor.apply();
+            Log.d("INSIDE", "INSIDE SIGN IN5");
 
             cancelProgress(progressDialog);
+            Log.d("INSIDE", "INSIDE SIGN IN6");
             startActivity(new Intent(this, Main2Activity.class));
+            Log.d("INSIDE", "INSIDE SIGN IN7");
             finish();
 
         } catch (ApiException e) {
             cancelProgress(progressDialog);
-
+            Log.d("", "AFTER");
+            Log.w("FAILURE", "Error adding document", e);
             if (isConnected(SignInActivity.this)) {
                 Toast.makeText(SignInActivity.this, "Could not sign in an error occurred", Toast.LENGTH_SHORT).show();
             } else {
